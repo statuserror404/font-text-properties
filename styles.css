@@ -1,7 +1,7 @@
 /* 
     ---------------------------------------------------------------
     Add your name to this file below:
-    NAME: 
+    NAME: Adam Sapit
     ---------------------------------------------------------------
 */
 
@@ -23,6 +23,9 @@
     --dk-gray: #222;
 
     /* Font Stacks */
+	--heading-fonts: 'Seymour One', Impact, sans-serif;
+	--body-fonts: Lato, Arial, sans-serif;
+
     /* add the two font stacks here */
 }
 
@@ -31,8 +34,12 @@ body{
 	/* Set the line height to 1.5 */
 	/* set the font size to 1.1rem	*/
 	/* set the font color to #222 (--dk-gray) */
+	font-family: var(--body-fonts);
 	margin: 0;
 	padding: 0;
+	line-height: 1.5;
+	font-size: 1.1rem;
+	color: var(--dk-gray);
 }
 
 header{
@@ -43,6 +50,9 @@ header{
 }
 
 h1, h2, h3{
+	text-align: center;
+	font-family: var(--heading-fonts);
+	font-variant: small-caps;
 	/* center align the text */
 	/* use a web font here (instructions on page) */
 	/* make the heading text all small caps style */
@@ -57,6 +67,7 @@ h2{
 h3{
 	margin: 0;
 	padding: 4px;
+	text-decoration: solid underline var(--mint) 4px;
 	/* add an underline like the one on the h2s to the h3s, but make it solid and mint color */
 }
 
@@ -72,9 +83,16 @@ nav ul{
 
 nav a{
 	/* make these display as block level elements */
+	display: block;
 	margin: 1rem auto;
 	padding: 1rem;
 	background-color: var(--tiffany);
+	color: var(--dk-gray);
+	text-align: center;
+	text-decoration: none;
+	font-size: 1.2rem;
+	font-weight: 600;
+
 	/* set the font color to #222 (--dk-gray) */
 	/* center align the text */
 	/* remove the underline */
@@ -100,6 +118,9 @@ section{
 }
 
 p{
+	max-width: 55ch;
+	text-indent: 2rem;
+	margin: 0 auto;
 	/* set a max-width of 55 characters */
 	/* add an indent on the first line of 2rem */
 	/* center those paragraphs (not the text) on the page */
@@ -116,10 +137,12 @@ a:hover{
 
 dl, ol, main ul{
 	/* limit the width of these lists to 55 characters */
+	max-width: 55ch;
 	margin: 1rem auto;
 }
 
 dt{
+	font-weight: bold;
 	/* make this font display in bold weight */
 }
 
